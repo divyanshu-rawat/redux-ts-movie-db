@@ -3,9 +3,15 @@ import './App.css';
 
 
 /**
- *  before you know that much of the ways we write Redux logic and,
- *  why it works relies on us knowing the shape of our state ahead of time.
+ * Why TypeScript?
+    - Code Suggestions.
+    - Highlight the errors as early as possible.
+    - Self-documenting code.
+    - TypeScript = JavaScript + some amazing stuff.
  */
+
+
+
 
 function App() {
   return (

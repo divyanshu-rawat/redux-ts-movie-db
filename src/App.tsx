@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { hot } from 'react-hot-loader';
+import { MovieContainer } from './containers/movieContainer';
 
 /**
  * Why TypeScript?
@@ -11,14 +12,17 @@ import { hot } from 'react-hot-loader';
  */
 
 
-
-
-function App() {
-  return (
-    <div className="App">
-      <h2>Hey!! 👋 </h2>
-    </div>
-  );
+class AppContainer extends React.Component {
+  constructor(props: any) {
+    super(props)
+  }
+  render() {
+    return (
+      <div>
+        <MovieContainer />
+      </div>
+    )
+  }
 }
 
-export default hot(module)(App);
+export default hot(module)(AppContainer);

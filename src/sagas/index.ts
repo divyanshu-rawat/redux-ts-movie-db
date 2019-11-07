@@ -1,4 +1,4 @@
-import { put, takeLatest, all, call } from "redux-saga/effects";
+import { put, takeLatest, all } from "redux-saga/effects";
 
 function* getMovies() {
     const key = '65e043c24785898be00b4abc12fcdaae';

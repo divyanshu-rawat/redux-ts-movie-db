@@ -15,11 +15,17 @@ export default class MovieComponent extends React.Component<MovieComponentProps,
         this.props.getMovieData();
     }
     render() {
-        console.log('<!!!!!!!!!<', this.props.state);
+        const results = this.props.state.GET_MOVIE_DATA.movie ? this.props.state.GET_MOVIE_DATA.movie.results : [];
         return (
-            <div>
-                <p>Hey!</p>
-            </div>
+            <nav>
+                <ul>
+                    {results.map(({ id, title }: any) => (
+                        <li key={id}>
+                            <p>{title}</p>
+                        </li>
+                    ))}
+                </ul>
+            </nav>
         )
     }
 }

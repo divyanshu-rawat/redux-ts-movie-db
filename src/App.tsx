@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { hot } from 'react-hot-loader';
 
 /**
  * Why TypeScript?
@@ -15,9 +16,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h2>Hello 👋 </h2>
+      <h2>Hey!! 👋 </h2>
     </div>
   );
 }
 
-export default App;
+export default hot(module)(App);

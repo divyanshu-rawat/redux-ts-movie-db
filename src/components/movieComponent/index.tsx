@@ -2,6 +2,7 @@ import React from 'react';
 
 interface MovieComponentProps {
     getMovieData(): any;
+    state: any
 }
 
 interface MyComponentState { }
@@ -11,9 +12,10 @@ export default class MovieComponent extends React.Component<MovieComponentProps,
         super(props)
     }
     componentDidMount() {
-        console.log(this.props.getMovieData());
+        this.props.getMovieData();
     }
     render() {
+        console.log('<!!!!!!!!!<', this.props.state);
         return (
             <div>
                 <p>Hey!</p>

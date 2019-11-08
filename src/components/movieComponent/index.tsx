@@ -1,21 +1,18 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
+import { AppState } from '../../rootReducer';
+import { ActionGetMovie } from '../../models/actionTypes';
+import { MovieComponentProperties } from '../../containers/movieContainer/movieContainer';
+interface MovieComponentState { }
 
-interface MovieComponentProps {
-    getMovieData(): any;
-    state: any
-}
-
-interface MyComponentState { }
-
-export default class MovieComponent extends React.Component<MovieComponentProps, MyComponentState> {
+export default class MovieComponent extends PureComponent<MovieComponentProperties, MovieComponentState> {
     constructor(props: any) {
         super(props)
     }
     componentDidMount() {
-        this.props.getMovieData();
+        this.props.getMovieAction();
     }
     render() {
-        const results = this.props.state.GET_MOVIE_DATA.movie ? this.props.state.GET_MOVIE_DATA.movie.results : [];
+        const results = this.props.state.movie ? this.props.state.movie.results : [];
         return (
             <nav>
                 <ul>

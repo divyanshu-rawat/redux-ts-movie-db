@@ -5,7 +5,6 @@ function* getMovies() {
     const data = yield fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${key}&language=en-US`)
         .then(response => response.json())
         .catch(err => err);
-
     yield put({ type: "MOVIES_RETRIEVED", data: data });
 }
 

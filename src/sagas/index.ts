@@ -6,7 +6,7 @@ function* getMovies() {
         .then(response => response.json())
         .catch(err => err);
 
-    yield put({ type: "MOVIES_RECEIVED", data: data });
+    yield put({ type: "MOVIES_RETRIEVED", data: data });
 }
 
 function* moviesActionWatcher() {

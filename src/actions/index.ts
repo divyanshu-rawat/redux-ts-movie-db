@@ -1,3 +1,5 @@
+import { ActionTypes } from '../constants';
+
 export const getMovieData = () => ({
-    type: 'GET_MOVIES',
+    type: ActionTypes.GET_MOVIES,
 });

@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import MOVIE_REDUCER from './reducers/';
-import * as t from "./constants";
+import { ActionTypes } from './constants';
 
 export default combineReducers({
-    [t.GET_MOVIE_DATA]: MOVIE_REDUCER,
+    [ActionTypes.GET_MOVIE]: MOVIE_REDUCER,
 });
 
